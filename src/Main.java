@@ -35,6 +35,10 @@ public class Main {
         if ((fNumb < 1) || (fNumb > 10) || (sNumb < 1) || (sNumb > 10)){
             return error;
         }
+        String testRoman1 = inputSplit[0], testRoman2 = inputSplit[2];         //проверка правильности ввода римского числа
+        if (testRoman1.length()>3 || testRoman2.length()>3) {
+            return error;
+        }
         String sign = inputSplit[1];
         switch (sign) {
             case "+" -> result = fNumb + sNumb;
